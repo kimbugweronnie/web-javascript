@@ -1,0 +1,21 @@
+# Local development overrides
+# This file is automatically loaded by docker-compose
+version: '3.8'
+
+services:
+  kanzu-rafiki-adaptor:
+    environment:
+      - NODE_ENV=development
+      - GRAPHQL_ENDPOINT=https://staging-graph-rafiki.kanzubanking.com/graphql
+      - AUTH_IDENTITY_SERVER_SECRET=2pEcn2kkCclbOHQiGNEwhJ0rucATZhrA807HTm2rNXE=
+      - AUTH_DOMAIN=https://staging-auth-rafiki.kanzubanking.com
+      - KANZU_API_BASE_URL=https://44.245.199.71:8443/fineract-provider/api/v1
+      - MOMO_BASE_URL=http://host.docker.internal:8000
+      - MOCK_MOMO_BASE_URL=http://host.docker.internal:5000
+    volumes:
+      - ./src:/app/src
+      - /app/node_modules
+    profiles: []
+
+
+

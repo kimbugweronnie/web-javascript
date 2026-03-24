@@ -11,7 +11,7 @@ export const useItemsStore = defineStore("items", () => {
  async function fetchItems(){
    loading.value = true
    const res = await api.get("/posts")
-   items.value = res.data.slice(0,10)
+   items.value = res.data.slice(0,100)
    loading.value = false
  }
 
