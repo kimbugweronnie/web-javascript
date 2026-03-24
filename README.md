@@ -1,1 +1,1 @@
-Full stack and APIs written in Javascript
+Full stack and APIs written in Javascript/Typescript
